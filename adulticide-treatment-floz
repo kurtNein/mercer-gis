@@ -1,0 +1,6 @@
+var rate = IIf($feature.rate_list == 'full',13,7);
+var startTime = $feature.time_start;
+var endTime = $feature.time_end;
+var elapsedTime = DateDiff(endTime, startTime, 'minutes');
+
+return elapsedTime * rate
