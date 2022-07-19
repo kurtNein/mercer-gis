@@ -1,0 +1,7 @@
+var parentFS = FeatureSetByName($datastore, 'feature set name');
+var key = $feature.parentglobalid;
+parentFS = Filter(parentFS, "GlobalID = @key");
+
+var parent = First(parentFS);
+
+return parent.area
