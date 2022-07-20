@@ -1,3 +1,4 @@
+```js
 var parentFS = FeatureSetByName($datastore, 'feature set name');
 var key = $feature.parentglobalid;
 //Reference to the parent feature set by name, declares key as the child's globalid
@@ -10,3 +11,4 @@ var parent = First(parentFS);
 
 return parent.area
 //Returns the field 'area' from the feature 'parent'
+```
