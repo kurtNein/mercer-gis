@@ -1,4 +1,4 @@
-var flow = When($feature.prod_list == 'zenivex', 1,
+var flow = When($feature.prod_list == 'zenivex', 13,
                 $feature.prod_list == 'anvil', 2,
                 $feature.prod_list == 'duet', 3,
                 $feature.prod_list == 'fyfanon', 4,
@@ -8,6 +8,8 @@ var flow = When($feature.prod_list == 'zenivex', 1,
 var rate = IIf($feature.rate_list == 'full', 1, 0.5);
 var startTime = $feature.time_start;
 var endTime = $feature.time_end;
-var elapsedTime = DateDiff(endTime, startTime, 'minutes');
+var elapsedTime = When(DateDiff(endTime, startTime, 'minutes') == 0,1,
+    DateDiff(endTime, startTime, 'minutes')
+    );
 
 return elapsedTime * flow * rate
