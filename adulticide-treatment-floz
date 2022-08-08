@@ -1,6 +1,6 @@
 var flow = When($feature.prod_list == 'zenivex', 13,
                 $feature.prod_list == 'anvil', 2,
-                $feature.prod_list == 'duet', 3,
+                $feature.prod_list == 'duet', 7,
                 $feature.prod_list == 'fyfanon', 4,
                 0
                 );
