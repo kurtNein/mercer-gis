@@ -9,4 +9,4 @@ var parent = First(parentFS);
 //Declares parent as the first result from the filter, may not be necessary in a 1-M relationship
 
 return parent.ai
-//Returns the field 'area' from the feature 'parent'
+//Returns the field 'ai' from the feature 'parent'
