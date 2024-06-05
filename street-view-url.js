@@ -1,3 +1,6 @@
+//This calculates a field to a clickable URL.
+//The URL takes the user to a panoramic street view on Google Maps through their default browser.
+
 var base_url = 'https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=';
 
 if (IsEmpty(Geometry($feature))) {
